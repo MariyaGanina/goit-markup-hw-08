@@ -1,0 +1,21 @@
+// Утиліти
+@import './utils/variables';
+@import './utils/visually-hidden';
+
+// Базові
+@import './base/basic';
+@import './base/reset';
+
+// Компоненти
+@import './components/btn';
+@import './components/header';
+@import './components/hero';
+@import './components/logo';
+@import './components/nav';
+@import './components/footer';
+@import './components/modal';
+@import './components/clients';
+@import './components/portfolio';
+@import './components/team';
+@import './components/activity';
+@import './components/advantages';

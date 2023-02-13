@@ -1,0 +1,45 @@
+/* Діяльність */
+
+.activity,
+.activity__list {
+    display: flex;
+    padding-top: 0;
+}
+
+.activity__item {
+    position: relative;
+    width: 370px;
+    height: 294px;
+
+&:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.activity .title {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    padding-top: 27px;
+    padding-bottom: 27px;
+    margin-bottom: 0;
+
+    color: var(--back-color);
+    background: rgba(47, 48, 58, 0.8);
+
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.section-title,
+.activity__title {
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    margin-bottom: 50px;
+}

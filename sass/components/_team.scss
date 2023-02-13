@@ -1,0 +1,58 @@
+/* Команда */
+
+.our-team {
+    background-color: var(--button-color);
+}
+
+.employee {
+    background-color: var(--back-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.team-list {
+    display: flex;
+
+& .employee:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.cards-bottom {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.item-icon {
+    display: flex;
+    max-width: 270px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    fill: var(--icons-color);
+    transition: fill var(--animation-orinary) var(--cubic-ordinary);
+}
+
+.icon-link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color var(--animation-orinary) var(--cubic-ordinary);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+    }
+
+    &:hover>.icon,
+    &:focus>.icon {
+        fill: var(--back-color);
+    }
+}

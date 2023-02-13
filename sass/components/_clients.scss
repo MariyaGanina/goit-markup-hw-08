@@ -1,0 +1,35 @@
+/* Наші клієнти */
+
+.regular-customers {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.clients-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+
+    border: solid 1px var(--icons-color);
+    border-radius: 4px;
+
+    outline: transparent;
+
+    transition: border-color var(--animation-orinary) var(--cubic-ordinary);
+
+    &:hover,
+    &:focus {
+            border-color: var(--accent-color);
+        }
+
+        &:hover>.icon,
+        &:focus>.icon {
+            fill: var(--accent-color);
+        }
+}
+
+
+
