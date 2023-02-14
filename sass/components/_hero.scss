@@ -1,35 +1,85 @@
 .hero {
-    height: 600px;
+    height: 400px;
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-        url("../images/hero-background.jpg");
+    
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-color: var(--back-section-color);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+                url(../images/adaptive/img_mobileHERO@1x.jpg);
+        
+    @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          
+                background-image: url(../images/adaptive/img_mobileHERO@2x.jpg);
+            
+        }
+
+            @media screen and (min-width: 768px) {
+                    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                            rgba(47, 48, 58, 0.4)),
+                        url(../images/adaptive/img_tabHERO@1x.jpg);
+
+                    @media screen and (min-device-pixel-ratio: 2),
+                        (min-resolution: 192dpi),
+                        (min-resolution: 2dppx) {
+                    
+                            background-image: url(../images/adaptive/img_tabHERO@2x.jpg);
+                    
+                        }
+                }
+
+            @media screen and (min-width: 1200px) {
+                height: 600px;
+                max-width: 1600px;
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                            rgba(47, 48, 58, 0.4)),
+                        url(../images/adaptive/img_deskHERO@1x.jpg);
+
+                @media screen and (min-device-pixel-ratio: 2),
+                      (min-resolution: 192dpi),
+                       (min-resolution: 2dppx) {
+                        
+                        background-image: url(../images/adaptive/img_deskHERO@2x.jpg);
+                        
+                            }
+             }
+
 
     &__title {
             color: var(--back-color);
-            width: 696px;
+            max-width: 360px;
     
             font-weight: 900;
-            font-size: 44px;
-            line-height: 1.36;
+            font-size: 26px;
+            line-height: 1.62;
             letter-spacing: 0.06em;
             text-transform: uppercase;
     
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 30px;
+
+        @media screen and (min-width: 1200px) {
+                max-width: 696px;
+                font-size: 44px;
+                line-height: 1.36;
+            }
         }
 
         &--style {
             background-color: var(--back-section-color);
             text-align: center;
-            padding: 200px 0;
+            padding: 118px 0;
+
+        @media screen and (min-width: 1200px) {
+                padding: 200px 0;
+            }
         }
 }
 
@@ -45,11 +95,15 @@
 
     cursor: pointer;
     border-radius: 4px;
-    padding: 10px 32px;
+    padding: 10px 24px;
 
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
     transition: background-color var(--animation-orinary) var(--cubic-ordinary);
+
+    @media screen and (min-width: 1200px) {
+            padding: 10px 32px;
+        }
 
 
     &:hover,
