@@ -1,9 +1,11 @@
 .header {
-    border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 
-    &__container {
-            display: flex;
-            align-items: center;
-        }
+  &__container {
+    align-items: center;
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+  }
 }
-

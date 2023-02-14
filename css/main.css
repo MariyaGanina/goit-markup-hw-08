@@ -177,12 +177,16 @@ img {
   border-bottom: 1px solid #ececec;
 }
 .header__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .hero {
@@ -1068,11 +1072,8 @@ img {
 }
 
 /* Переваги */
-.advantages .section {
-  padding-bottom: 0px;
-}
 @media screen and (min-width: 1200px) {
-  .advantages .section {
+  .advantages {
     padding-bottom: 47px;
   }
 }
@@ -1141,11 +1142,28 @@ img {
   width: 100%;
   height: 100%;
   background-color: var(--back-color);
-  padding: 40px;
+  padding: 40px 48px;
+  -webkit-transition: -webkit-transform var(--cubic-ordinary);
+  transition: -webkit-transform var(--cubic-ordinary);
+  transition: transform var(--cubic-ordinary);
+  transition: transform var(--cubic-ordinary), -webkit-transform var(--cubic-ordinary);
 }
 .modal-menu.is-open {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+
+.headermodal-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .modal-menu_btn {
@@ -1154,12 +1172,10 @@ img {
   right: 15px;
 }
 
-@media screen and (min-width: 768px) {
-  .header__btn-menu {
-    display: none;
-  }
+.header__btn-menu {
+  margin-left: auto;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .header__btn-menu {
     display: none;
   }
@@ -1173,4 +1189,64 @@ img {
 }
 .headermodal-close:hover, .headermodal-close:focus {
   fill: var(--accent-color);
+}
+
+.modal-menu__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+.modal-menu__link:hover, .modal-menu__link:focus {
+  color: var(--accent-color);
+}
+
+.modal-menu__link.contact {
+  font-size: 24px;
+  line-height: 1.17px;
+  letter-spacing: 0.02em;
+  color: var(--ordinary-text-color);
+}
+.modal-menu__link.contact:hover, .modal-menu__link.contact:focus {
+  color: var(--accent-color);
+}
+
+.modals-contact {
+  margin-bottom: 32px;
+}
+
+.modals-link:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.headermodals-contact {
+  margin-top: auto;
+}
+
+.headermodal-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 32px;
+  color: var(--accent-color);
+}
+
+.headermodal-item {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding: 0 5px;
+}
+.headermodal-item:last-child {
+  border: none;
+}
+
+.headermodal-item:not(:first-child) {
+  padding-left: 10px;
+}
+
+.headermodal-item:not(:last-child) {
+  padding-right: 10px;
 }/*# sourceMappingURL=main.css.map */
